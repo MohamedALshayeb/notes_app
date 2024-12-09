@@ -12,10 +12,7 @@ class NoteViewBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 40),
-          CustomAppBar(
-            textTitle: 'Notes',
-            icon: Icons.search,
-          ),
+          CustomAppBar(textTitle: 'Notes', icon: Icons.search),
           Expanded(child: NotesListView()),
         ],
       ),
