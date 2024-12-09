@@ -11,7 +11,14 @@ class AddNoteShowModalBottomSheet extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 25),
-          CustomTextField(),
+          CustomTextField(
+            hintText: 'Title',
+          ),
+          SizedBox(height: 25),
+          CustomTextField(
+            hintText: 'Content',
+            maxLine: 5,
+          ),
         ],
       ),
     );
