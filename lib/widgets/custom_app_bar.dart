@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app_training/constants.dart';
 import 'package:notes_app_training/widgets/custom_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -14,7 +15,7 @@ class CustomAppBar extends StatelessWidget {
         Text(
           textTitle,
           style: const TextStyle(
-            color: Colors.white,
+            color: kPrimaryColor,
             fontWeight: FontWeight.bold,
             fontSize: 20,
           ),
