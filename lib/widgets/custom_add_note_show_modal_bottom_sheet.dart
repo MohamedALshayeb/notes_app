@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:notes_app_training/cuibits/add_note_cubit/add_note_cubit.dart';
+import 'package:notes_app_training/cuibits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app_training/widgets/add_note_form.dart';
 // import 'package:notes_app_training/widgets/custom_bottom.dart';
 // import 'package:notes_app_training/widgets/custom_text_field.dart';
@@ -22,10 +23,9 @@ class AddNoteShowModalBottomSheet extends StatelessWidget {
         child: SingleChildScrollView(
           child: BlocConsumer<AddNoteCubit, AddNoteState>(
             listener: (context, state) {
-              if (state is AddNotefailure) {
-                'failed ${state.errMessage}';
-              }
+              if (state is AddNotefailure) {}
               if (state is AddNotesuccess) {
+                BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                 Navigator.pop(context);
               }
             },
