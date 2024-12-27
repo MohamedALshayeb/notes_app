@@ -3,10 +3,12 @@ import 'package:notes_app_training/constants.dart';
 import 'package:notes_app_training/widgets/custom_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key, required this.textTitle, required this.icon});
+  const CustomAppBar(
+      {super.key, required this.textTitle, required this.icon, this.onPressed});
 
   final String textTitle;
   final IconData icon;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,7 @@ class CustomAppBar extends StatelessWidget {
         ),
         const Spacer(),
         CustomIcon(
+          onPressed: onPressed,
           icons: icon,
         ),
       ],
