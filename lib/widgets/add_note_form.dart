@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:notes_app_training/cuibits/add_note_cubit/add_note_cubit.dart';
 import 'package:notes_app_training/models/note_model.dart';
 import 'package:notes_app_training/widgets/custom_bottom.dart';
+import 'package:notes_app_training/widgets/custom_color_listview.dart';
 import 'package:notes_app_training/widgets/custom_text_field.dart';
 
 class AddNoteForm extends StatefulWidget {
@@ -43,6 +44,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
             maxLine: 5,
           ),
           // Spacer(), //will be error if using it inside SingleChildScrollView
+          const SizedBox(height: 25),
+          const CustomColorListView(),
           const SizedBox(height: 40),
 
           BlocBuilder<AddNoteCubit, AddNoteState>(
