@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes_app_training/constants.dart';
 import 'package:notes_app_training/cuibits/add_note_cubit/add_note_cubit.dart';
 
 class ColorItem extends StatelessWidget {
@@ -34,39 +35,31 @@ class CustomColorListView extends StatefulWidget {
 
 class _CustomColorListViewState extends State<CustomColorListView> {
   int currentColorIndex = 0;
-  List<Color> colors = const [
-    Colors.blue,
-    Colors.red,
-    Colors.green,
-    Colors.yellow,
-    Colors.purple,
-    Colors.orange,
-    Colors.pink,
-    Colors.teal
-  ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 38 * 2,
       child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: colors.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: GestureDetector(
-                onTap: () {
-                  currentColorIndex = index;
-                  BlocProvider.of<AddNoteCubit>(context).color = colors[index];
-                  setState(() {});
-                },
-                child: ColorItem(
-                  color: colors[index],
-                  isSelected: currentColorIndex == index,
-                ),
+        scrollDirection: Axis.horizontal,
+        itemCount: kColors.length,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: GestureDetector(
+              onTap: () {
+                currentColorIndex = index;
+                BlocProvider.of<AddNoteCubit>(context).color = kColors[index];
+                setState(() {});
+              },
+              child: ColorItem(
+                color: kColors[index],
+                isSelected: currentColorIndex == index,
               ),
-            );
-          }),
+            ),
+          );
+        },
+      ),
     );
   }
 }
