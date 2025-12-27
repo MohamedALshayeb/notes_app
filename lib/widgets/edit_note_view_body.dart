@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:notes_app_training/constants.dart';
+// import 'package:notes_app_training/constants.dart';
 import 'package:notes_app_training/cuibits/notes_cubit/notes_cubit.dart';
 import 'package:notes_app_training/models/note_model.dart';
 import 'package:notes_app_training/widgets/custom_app_bar.dart';
-import 'package:notes_app_training/widgets/custom_color_listview.dart';
+// import 'package:notes_app_training/widgets/custom_color_listview.dart';
 import 'package:notes_app_training/widgets/custom_text_field.dart';
 import 'package:notes_app_training/widgets/edit_note_color_listview.dart';
 
