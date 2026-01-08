@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "41041011268",
+    "project_id": "note-app-distribuation-test",
+    "storage_bucket": "note-app-distribuation-test.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41041011268:android:8bb1fda67d855cf9c55211",
+        "android_client_info": {
+          "package_name": "com.example.notes_app_training"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAppwRiENPuxi7VTq8oceC2OYpXbeBaXZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
